@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>food</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h5 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background:;
+  color: white;
+}
+.bgimg {
+  background-image: url('j.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container {
+  position: relative;
+  display: none;
+}
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+.column1 {
+  float: left;
+  width: 33.33%;
+  padding: 2px;
+  background-color:;
+}
+
+/* Clearfix (clear floats) */
+.row1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+a{
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+footer {
+  padding: 3px;
+  background-color:black;
+  color: white;
+}
+footer {
+  padding: 3px;
+  background-color:black;
+  color: white;
+}
+</style>
+</head>
+<body>
+  
+<div class="topnav">
+  <a class="active" href="index.html">Home</a>
+  </div>
+<div class="bgimg w3-display-container w3-text-white">
+  <div class="w3-display-middle w3-jumbo">
+    <p>Resturtant</p>
+  </div>
+  <div class="w3-display-topleft w3-container w3-xlarge">
+    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-brown">menu</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-brown">contact</button></p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="" alt="" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="menu-2.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="menu-3.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="menu-5.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="" alt="" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="menu-6.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="menu-7.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="menu-8.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+    </div>
+  </div>
+  
+  <div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+  </div>
+  
+  <div class="w3-display-bottomleft w3-container">
+    <p class="w3-xlarge">Sunday-Friday|24/7</p>
+    <p class="w3-large">42 village St,Bangalore</p>
+    <p>powered by <a href="http://127.0.0.1:5500/rest.html" target="_blank">ann.com</a></p>
+  </div>
+</div>
+<div id="menu" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-brown w3-display-container">
+      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Starters</h1>
+    </div>
+    <div class="w3-container">
+      <h5>Tomato Soup <b>2.50</b></h5>
+      <h5>Chicken Salad <b>3.50</b></h5>
+      <h5>Bread and Butter <b>1.00</b></h5>
+    </div>
+    <div class="w3-container w3-brown">
+      <h1>Main Courses</h1>
+    </div>
+    <div class="w3-container">
+      <h5>Grilled Fish and Potatoes <b>8.50</b></h5>
+      <h5>Italian Pizza <b>5.50</b></h5>
+      <h5>Veggie Pasta <b>4.00</b></h5>
+      <h5>Chicken and Potatoes <b>6.50</b></h5>
+      <h5>Deluxe Burger <b>5.00</b></h5>
+    </div>
+    <div class="w3-container w3-brown">
+      <h1>Desserts</h1>
+    </div>
+    <div class="w3-container">
+      <h5>Fruit Salad <b>2.50</b></h5>
+      <h5>Ice cream <b>2.00</b></h5>
+      <h5>Chocolate Cake <b>4.00</b></h5>
+      <h5>Cheese <b>5.50</b></h5>
+    </div>
+  </div>
+</div>
+<div id="contact" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-brown">
+      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Contact</h1>
+    </div>
+    <div class="w3-container">
+      <p>Reserve a table, ask for today's special or just send us a message:</p>
+      <form target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+        <p><button class="w3-button" type="submit">SEND MESSAGE</button></p>
+      </form>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="row1">
+    <div class="column1">
+  <h3>Ann</h3><br>
+  <p>Far far away,behind the world mountains, far from the countries Vokalia and Consonantian,there live the blink texts.</p>
+</div>  
+<div class="column1"> 
+  <h3>Useful Links</h3>
+  <ul>
+    <li>Blog</li>
+    <li>Rooms</li>
+    <li>Amenities</li>
+    <li>Gift Card</li>
+  </ul>
+</div>
+<div class="column1">
+<h3>Privacy</h3>
+<ol type="i">
+  <li>Career</li>
+  <li>About Us</li>
+  <li>Contact Us</li>
+  <li>Services</li>
+</ol>
+</div>
+<div class="column1">
+<h3>Have a Question?</h3>
+<p>154 South st,Bangalore,India.<br>
++91 3696369852<br>
+ann@yahoo.com<br>
+</p>
+</div>
+</div>
+<p>Copyright@2022 All rights reverved|This page is made with by s.com</p>
+</footer>
+<script>
+  function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+  }
+  </script>
+  
+</body>
+</html>
+

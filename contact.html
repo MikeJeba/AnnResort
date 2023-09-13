@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>co</title>
+    <style>
+h2{
+ text-align: center;
+color:goldenrod;
+font-family: 'Courier New', Courier, monospace;
+ }
+h1{
+ text-align: center;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+img {
+border-radius: 50%;
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.text {
+  color:black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("w.jpg");
+
+  min-height:150%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+.topnav {
+  overflow: hidden;
+  background-color:#bbb;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:black;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+.column1 {
+  float: left;
+  width: 33.33%;
+  padding: 2px;
+  background-color: black;
+}
+
+/* Clearfix (clear floats) */
+.row1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+footer {
+  padding: 3px;
+  background-color:black;
+  color: white;
+}
+* {box-sizing: border-box;}
+
+.img-magnifier-container {
+  position:relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 100px;
+  height: 100px;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+form.new {
+  border: 2px solid red;
+  border-radius:22px;
+  padding: 5px;
+}
+p.o{
+  border-left: 6px solid red;
+  background-color:;
+  font-size: 100%;
+}
+div.q{
+  border: 1px solid black;
+  margin: 25px;
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+  
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  </div>
+    <h2>TESIMONY</h2>
+    <h1>Our Happy Guest Says</h1>
+    <center>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="person_4.jpg" height="50%" width="50%">
+          <div class="text">nice</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="staff-1.jpg" height="50%" width="50%">
+          <div class="text">Good</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="staff-2.jpg" height="50%" width="50%">
+          <div class="text">Average</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="staff-3.jpg" height="50%" width="50%">
+            <div class="text">Extraordinary</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="staff-4.jpg" height="50%" width="50%">
+            <div class="text">awesome</div>
+          </div>
+        </div>
+        <br>
+        </center>
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+        <h2>Review From People</h2>
+        <div class="row">
+          <div class="column" style="background-color:#aaa;">
+            Stayed there for 2 days with our young daughter. She loved the ambience and particularly campfire. The Table Tennis are was closed due to COVID. The room is good and comfortable and staff were nice.... 
+          </div>
+          <div class="column" style="background-color:#eee;">
+            Pros: Locality, cleanliness and hospitality. We should mention food is very good at the restaurant to the level that we did not eat outside. Cons: No Wi-fi. Due to this i could not continue my Work-From-Home stay longer....
+          </div>
+          <div class="column" style="background-color:#ddd;">
+            Cons: No Wi-fi. Due to this i could not continue my Work-From-Home stay longer as originally planned....
+          </div>
+          <div class="column" style="background-color: #ccc;">
+            Property was nice. Beds ok not bad. No toiletries provided. Breakfast was provided and tasty. Food little overpriced. Staffs are polite and very friendly. Location was good and calm no disturbance....
+          </div>
+        </div>
+        <center>
+        <form class="new">
+          <h3>Is this review useful?</h3>
+          <input type="radio" id="yes" name="fav_language" value="yes">
+          <label for="html">Yes</label><br>
+          <input type="radio" id="no" name="fav_language" value="no">
+          <label for="css">No</label><br>
+        </form>
+        </center>
+        <div class="q">
+        <h2>Contact Us</h2>
+        <h3>Contact Information</h3>
+        <p>Address : 198,South Market Street,Bangalore.</p><br>
+        <p>Phone : +91 9751324266</p><br>
+        <p>Email : ann@gmail.com</p><br>
+        <p>Website : ann.com</p><br>
+        </div>
+        <div class="bg-img">
+          <form class="container">
+            <h1>Contact Us</h1>
+        <p class="o">For any quries and info keep in touch with us we love to speak with new people.</p>
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter name" name="Name" required>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <label for="country"><b>Country</b></label>
+            <select id="country" name="country">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select><br>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <input type="submit" class="btn" value="contact">
+          </form>
+        </div>
+        <div class="img-magnifier-container">
+          <img id="myimage" src="m.jpg" width="600" height="600">
+        </div>
+        <footer>
+          <div class="row1">
+            <div class="column1">
+          <h3>Ann</h3><br>
+          <p>Far far away,behind the world mountains, far from the countries Vokalia and Consonantian,there live the blink texts.</p>
+        </div>  
+        <div class="column1"> 
+          <h3>Useful Links</h3>
+          <ul>
+            <li>Blog</li>
+            <li>Rooms</li>
+            <li>Amenities</li>
+            <li>Gift Card</li>
+          </ul>
+      </div>
+      <div class="column1">
+        <h3>Privacy</h3>
+        <ol type="i">
+          <li>Career</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Services</li>
+        </ol>
+      </div>
+      <div class="column1">
+        <h3>Have a Question?</h3>
+        <p>154 South st,Bangalore,India.<br>
+        +91 3696369852<br>
+        ann@yahoo.com<br>
+        </p>
+        <p>Copyright@2022 All rights reverved|This page is made with by ann.com</p>
+      </div>
+        </div>
+        </footer>
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        function magnify(imgID, zoom) {
+  var img, glass, w, h, bw;
+  img = document.getElementById(imgID);
+  /*create magnifier glass:*/
+  glass = document.createElement("DIV");
+  glass.setAttribute("class", "img-magnifier-glass");
+  /*insert magnifier glass:*/
+  img.parentElement.insertBefore(glass, img);
+  /*set background properties for the magnifier glass:*/
+  glass.style.backgroundImage = "url('" + img.src + "')";
+  glass.style.backgroundRepeat = "no-repeat";
+  glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+  bw = 3;
+  w = glass.offsetWidth / 2;
+  h = glass.offsetHeight / 2;
+  /*execute a function when someone moves the magnifier glass over the image:*/
+  glass.addEventListener("mousemove", moveMagnifier);
+  img.addEventListener("mousemove", moveMagnifier);
+  /*and also for touch screens:*/
+  glass.addEventListener("touchmove", moveMagnifier);
+  img.addEventListener("touchmove", moveMagnifier);
+  function moveMagnifier(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    x = pos.x;
+    y = pos.y;
+    /*prevent the magnifier glass from being positioned outside the image:*/
+    if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+    if (x < w / zoom) {x = w / zoom;}
+    if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+    if (y < h / zoom) {y = h / zoom;}
+    /*set the position of the magnifier glass:*/
+    glass.style.left = (x - w) + "px";
+    glass.style.top = (y - h) + "px";
+    /*display what the magnifier glass "sees":*/
+    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+magnify("myimage", 3);
+        </script>
+</body>
+</html>

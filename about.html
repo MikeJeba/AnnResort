@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>about</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+body,html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+  font-size: 400%;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+h2{
+  color:gold;
+  text-align: center;
+  font-family:serif;
+  font-size: 300%;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: lightblue;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+.bg-image {
+  height: 100%; 
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+.img1 { background-image: url("image_1.jpg"); }
+.img2 { background-image: url("image_2.jpg"); }
+.img3 { background-image: url("image_3.jpg"); }
+.img4 { background-image: url("image_4.jpg"); }
+.img5 { background-image: url("image_5.jpg"); }
+.img6 { background-image: url("image_6.jpg"); }
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+.new{
+  font-size: 200%;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity:-0.2;
+  transition: .3s ease;
+  background-color:lightpink;
+}
+
+.container:hover .overlay {
+  opacity:1;
+}
+
+.icon {
+  color: white;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.fa-user:hover {
+  color: #eee;
+}
+.text {
+  background-color:peru;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+footer{
+  background-color: black;
+  text-align: center;
+}
+</style>
+</head>
+<body style="background-color: blanchedalmond;">
+  
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  </div>
+  <h1>ABOUT US</h1>
+  <a href="b.html">
+  <div class="bg-image img1"></div>
+  <div class="bg-image img2"></div>
+  <div class="bg-image img3"></div>
+  <div class="bg-image img4"></div>
+  <div class="bg-image img5"></div>
+  <div class="bg-image img6"></div>
+  </a>
+<div style="text-align:center">
+
+
+  <p class="new">To know more about us:</p>
+</div>
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:gold;">
+    Regarding us
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:lawngreen;">
+    With reference to us
+</div>
+  <div class="column" onclick="openTab('b3');" style="background:red;">
+    Concerning us
+  </div>
+</div>
+<div id="b1" class="containerTab" style="display:none;background:gold">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Regarding Us</h2>
+  <p>A resort hotel is a hotel which often contains full-sized luxury facilities with full-service accommodations and amenities. These hotels may attract both business conferences and vacationing tourists and offer more than a convenient place to stay.These hotels may be referred to as major conference center hotels, flagship hotels, destination hotels, and destination resorts. The market for conference and resort hotels is a subject for market analysis.
+
+    These hotels as destinations may be characterized by distinctive architecture, upscale lodgings, ballrooms, large conference facilities, restaurants, and recreation activities such as golf or skiing. They may be located in a variety of settings from major cities to remote locations.</p>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:lawngreen">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>With reference to us</h2>
+  <p>A spa resort is a short-term residential/lodging facility with the primary purpose of providing individual services for spa goers to develop healthy habits. Historically, many such spas were developed at the location of natural hot springs or sources of mineral waters. Typically over a seven-day stay, such facilities provide a comprehensive program that includes spa services, physical fitness activities, healthy diet programs, and special interest programming.
+    Golf resorts are resorts that cater specifically to the sport of golf, and they include access to one or more golf courses and/or clubhouses. Golf resorts typically provide golf packages that provide visitors with all greens and cart fees, range balls, accommodations, and meals.
+    Some all-inclusive resorts are designed for specific groups. For example, some resorts cater for adults only, and even more-specialized properties accept couples only. Other all-inclusive resorts are geared toward families, with facilities like craft centers, game rooms, and water parks to keep children of all ages entertained. All-inclusive resorts are also very popular locations for destination weddings.
+  </p>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Concerning us</h2>
+  <p>Staying at a family resort also gives you the chance to try new foods and traditional dishes. It's extremely important to foster a food culture from a young age so kids learn to eat everything and avoid being swayed by appearances. A balanced lifestyle involves a varied diet as well as sports every now and then.
+    Resorts face unique challenges. They are usually more expensive, geographically harder to reach and incur longer stays than standard full-service hotels. Many are built in “clusters” in a destination, too, which can make it tough to differentiate one's product from the resort next door.
+    The resort hotel is a luxury facility that is intended primarily for vacationers and is usually located near special attractions, such as beaches and seashores, scenic or historic areas, ski parks, or spas.
+  </p>
+</div>
+<h2>PHOTOS</h2>
+<h1>Instagram</h1>
+<div class="row">
+  <div class="column">
+<div class="container">
+  <img src="insta-1.jpg" alt="Avatar" class="image" height="100%" width="100%">
+  <div class="overlay">
+  <a href="insta-1.jpg" class="icon" title="User Profile">
+    <i class="fa fa-user"></i>
+  </a>
+  <div class="middle">
+    <div class="text">@jo</div>
+  </div>
+  </div>
+</div>
+</div>
+<div class="column">
+<div class="container">
+  <img src="insta-3.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+  <a href="insta-3.jpg" class="icon" title="User Profile">
+    <i class="fa fa-user"></i>
+  </a>
+  <div class="middle">
+    <div class="text">@kid</div>
+  </div>
+  </div>
+</div>
+</div>
+<div class="column">
+<div class="container">
+  <img src="insta-4.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+  <a href="insta-4.jpg" class="icon" title="User Profile">
+    <i class="fa fa-user"></i>
+  </a>
+  <div class="middle">
+    <div class="text">@jessy</div>
+  </div>
+  </div>
+</div>
+<footer>
+<p>Copyright@2022 All rights reverved|This page is made with by<a href="about.html"> ann.com</a></p>
+</footer>
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+
+</body>
+</html> 

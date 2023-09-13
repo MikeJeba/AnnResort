@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<style>
+body {
+  margin: 0;
+}
+h2{
+  text-align: center;
+  color:gold;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+  text-align: center;
+  font-family:italic;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:lightpink;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:400%;
+  font-style:bolder;
+  font-family: 'Courier New', Courier, monospace;
+}
+.center-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  background-color: lightgoldenrodyellow;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.column1 {
+  float: left;
+  width: 33.33%;
+  padding: 2px;
+  background-color:black;
+}
+
+/* Clearfix (clear floats) */
+.row1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+a{
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+.a{
+  background-color:lightgoldenrodyellow;
+}
+.container1{
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.container1:hover .image {
+  opacity: 0.3;
+}
+
+.container1:hover .middle {
+  opacity: 1;
+}
+.text{
+font-size:20px;
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+aside {
+                width: 30%;
+                padding-left: 15px;
+                margin-left: 15px;
+                float: right;
+                font-style:none;
+                 background-color:blanchedalmond;
+            }
+            footer {
+  padding: 3px;
+  background-color:black;
+  color: white;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color:red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="#home">Ann</a>
+  <div class="topnav-right">
+  <a class="active" href="index.html">Home</a>
+  <a class="active" href="rooms.html">Rooms</a>
+    <a class="active" href="rest.html">Resturtant</a>
+    <a href="about.html">About</a>
+    <a  href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+<div style="padding-left:16px">
+  <h2></h2>
+  <p></p>
+</div>
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <div class="container">
+        <div class="center-left">
+          <video width="400" height="200" poster="a.jpg" controls>
+            <source src="videoplayback.mp4" type="video/mp4">
+            <source src="videoplayback.ogg" type="video/ogg">
+            </video>
+        </div>
+      <img src="bg_1.jpg" style="width:100%">
+      <div class="centered"><mark>Ann</mark> Resort and Hostel</div>
+      </div>
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <div class="container">
+        <div class="center-left">
+          <video width="400" height="200" poster="a.jpg" controls>
+            <source src="videoplayback.mp4" type="video/mp4">
+            <source src="videoplayback.ogg" type="video/ogg">
+            </video>
+        </div>
+      <img src="bg_2.jpg" style="width:100%">
+    <div class="centered">More than a hotel experience....</div>  
+    </div>
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <div class="container">
+        <div class="center-left">
+          <video width="400" height="200" poster="a.jpg" controls>
+            <source src="videoplayback.mp4" type="video/mp4">
+            <source src="videoplayback.ogg" type="video/ogg">
+            </video>
+        </div>
+    <img src="bg_3.jpg" style="width:100%">
+    <div class="centered">Experience epic and Beauty</div>
+    </div>
+      <div class="text"></div>
+    </div>
+    </div>
+    <br>
+    <div class="rows=4">
+      <div class="column">
+    <form action="" class="a">
+      <label for="birthday">Check in date</label><br>
+      <input type="date" id="birthday" name="birthday" placeholder="Check-in date">
+    </div>
+    <div class="column">
+      <label for="birthday">Check out date</label><br>
+      <input type="date" id="birthday" name="birthday" placeholder="Check-out date">
+    </div> 
+    <div class="column">
+      Room<br>
+    <input list="rooms" name="room">
+  <datalist id="rooms">
+    <option value="suit">
+    <option value="family room">
+    <option value="deluxe room">
+    <option value="classic room">
+    <option value="superior room">
+  </datalist>
+  </div>
+  <div class="column">
+    Guests<br>
+  <input list="adult" name="adult">
+<datalist id="adult">
+  <option value="1 Adult">
+  <option value="2 Adult">
+  <option value="3 Adult">
+    <option value="4 Adult">
+    <option value="5 Adult">
+  <option value="6 Adult">
+</datalist>
+</div>
+    </form>
+      </div>
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    <div class="row">
+    <div class="column">
+    <div class="container1">
+      <img src="room-3.jpg" alt="Avatar" class="image" style="width:200%">
+      <div class="middle">
+        <div class="text">Special Room</div>
+      </div>
+    </div>
+    </div>
+    <div class="column">
+    <div class="container1">
+      <img src="resto.jpg" alt="Avatar" class="image" style="width:200%">
+      <div class="middle">
+        <div class="text">Resturtant</div>
+      </div>
+    </div>
+    </div>
+    <div class="column">
+    <div class="container1">
+      <img src="s.jpg" alt="Avatar" class="image" style="width:200%">
+      <div class="middle">
+        <div class="text">Swimming Pool</div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <h2>Welcome To Ann Resort</h2>
+    <h1>A New Vision of Luxury Hotel</h1>
+    <a target="_blank" href="a.png">
+      <img src="a.png" alt="Forest" width="200px">
+    </a>
+    <a target="_blank" href="d.jpg">
+      <img src="d.jpg" alt="Forest" width="200px">
+    </a>
+    <a target="_blank" href="f.jpg">
+      <img src="f.jpg" alt="Forest" width="200px">
+    </a>
+    <a target="_blank" href="g.jpg">
+      <img src="g.jpg" alt="Forest" width="200px">
+    </a>
+    <a target="_blank" href="h.jpg">
+      <img src="h.jpg" alt="Forest" width="200px">
+    </a>
+    <aside>
+    <ul>
+      <li>Friendly Service</li>
+      <li>Get Breakfast</li>
+      <li>Transfer Services</li>
+      <li>Suits & SPA</li>
+      <li>Cozy Rooms</li>
+    </ul>
+    </aside><br>
+<br>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Go to Top</button>
+
+    <footer>
+      <div class="row1">
+        <div class="column1">
+      <h3>Ann</h3><br>
+      <p>Far far away,behind the world mountains, far from the countries Vokalia and Consonantian,there live the blink texts.</p>
+    </div>  
+    <div class="column1"> 
+      <h3>Useful Links</h3>
+      <ul>
+        <li>Blog</li>
+        <li>Rooms</li>
+        <li>Amenities</li>
+        <li>Gift Card</li>
+      </ul>
+  </div>
+  <div class="column1">
+    <h3>Privacy</h3>
+    <ol type="i">
+      <li>Career</li>
+      <li>About Us</li>
+      <li>Contact Us</li>
+      <li>Services</li>
+    </ol>
+  </div>
+  <div class="column1">
+    <h3>Have a Question?</h3>
+    <p>154 South st,Bangalore,India.<br>
+    +91 3696369852<br>
+    ann@yahoo.com<br>
+    </p>
+  </div>
+    </div>
+    <p>Copyright@2022 All rights reverved|This page is made with by ann.com</p>
+    </footer>
+    
+    <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 3000); // Change image every 2 seconds
+    }
+    //Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+    </script>
+    
+</body>
+</html>
