@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  .input-container {
+    margin-bottom: 20px;
+  }
+  .data-list {
+    margin-top: 20px;
+  }
+  .data-item {
+    margin: 10px 0;
+  }
+</style>
+<title>Simple Local Storage Example</title>
+</head>
+<body>
+
+<h1>Simple Local Storage Database</h1>
+<div class="input-container">
+  <label for="dataInput">Enter Data:</label><br>
+  <input type="text" id="dataInput" placeholder="Enter some data">
+  <button onclick="saveData()">Save Data</button>
+</div>
+
+<div>
+  <h2>Stored Data:</h2>
+  <div id="dataList" class="data-list"></div>
+</div>
+
+<script>
+  // Function to save data to localStorage
+  function saveData() {
+    const input = document.getElementById("dataInput");
+    const data = input.value;
+
+    if (data) {
+      // Get existing data from localStorage or initialize an empty array
+      let storedData = JSON.parse(localStorage.getItem("myData")) || [];
+      
+      // Add new data
+      storedData.push(data);
+      
+      // Save updated data back to localStorage
+      localStorage.setItem("myData", JSON.stringify(storedData));
+
+      // Clear the input field
+      input.value = "";
+
+      // Refresh the displayed data
+      displayData();
+    } else {
+      alert("Please enter some data.");
+    }
+  }
+
+  // Function to display data from localStorage
+  function displayData() {
+    const dataList = document.getElementById("dataList");
+    const storedData = JSON.parse(localStorage.getItem("myData")) || [];
+
+    // Clear existing content
+    dataList.innerHTML = "";
+
+    // Display each stored item
+    storedData.forEach((item, index) => {
+      const dataItem = document.createElement("div");
+      dataItem.className = "data-item";
+      dataItem.innerHTML = `
+        ${index + 1}. ${item}
+        <button onclick="deleteData(${index})">Delete</button>
+      `;
+      dataList.appendChild(dataItem);
+    });
+  }
+
+  // Function to delete data from localStorage
+  function deleteData(index) {
+    let storedData = JSON.parse(localStorage.getItem("myData")) || [];
+    
+    // Remove the selected item
+    storedData.splice(index, 1);
+    
+    // Save updated data back to localStorage
+    localStorage.setItem("myData", JSON.stringify(storedData));
+
+    // Refresh the displayed data
+    displayData();
+  }
+
+  // Display stored data on page load
+  document.addEventListener("DOMContentLoaded", displayData);
+</script>
+
+</body>
+</html>
