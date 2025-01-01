@@ -3,6 +3,8 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
 <style>
 body {
   margin: 0;
@@ -304,40 +306,44 @@ aside {
     </div>
     <br>
     <div class="rows=4">
-      <div class="column">
-    <form action="" class="a">
-      <label for="birthday">Check in date</label><br>
-      <input type="date" id="birthday" name="birthday" placeholder="Check-in date">
+      <form id="bookingForm">
+        <div class="column">
+          <label for="checkIn">Check-in date</label><br>
+          <input type="date" id="checkIn" name="checkInDate" required>
+        </div>
+        <div class="column">
+          <label for="checkOut">Check-out date</label><br>
+          <input type="date" id="checkOut" name="checkOutDate" required>
+        </div> 
+        <div class="column">
+          <label for="room">Room</label><br>
+          <input list="rooms" name="room" id="room" required>
+          <datalist id="rooms">
+            <option value="Suite">
+            <option value="Family Room">
+            <option value="Deluxe Room">
+            <option value="Classic Room">
+            <option value="Superior Room">
+          </datalist>
+        </div>
+        <div class="column">
+          <label for="guests">Guests</label><br>
+          <input list="guests" name="guests" id="guests" required>
+          <datalist id="guests">
+            <option value="1 Adult">
+            <option value="2 Adults">
+            <option value="3 Adults">
+            <option value="4 Adults">
+            <option value="5 Adults">
+            <option value="6 Adults">
+          </datalist>
+        </div>
+        <div class="column">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
     </div>
-    <div class="column">
-      <label for="birthday">Check out date</label><br>
-      <input type="date" id="birthday" name="birthday" placeholder="Check-out date">
-    </div> 
-    <div class="column">
-      Room<br>
-    <input list="rooms" name="room">
-  <datalist id="rooms">
-    <option value="suit">
-    <option value="family room">
-    <option value="deluxe room">
-    <option value="classic room">
-    <option value="superior room">
-  </datalist>
-  </div>
-  <div class="column">
-    Guests<br>
-  <input list="adult" name="adult">
-<datalist id="adult">
-  <option value="1 Adult">
-  <option value="2 Adult">
-  <option value="3 Adult">
-    <option value="4 Adult">
-    <option value="5 Adult">
-  <option value="6 Adult">
-</datalist>
-</div>
-</form>
-</div>
+     
 <div style="padding: 60px;">
 </div>
     <div class="row">
@@ -469,6 +475,26 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+const data = {
+  checkInDate: document.getElementById('checkIn').value,
+  checkOutDate: document.getElementById('checkOut').value,
+  room: document.getElementById('room').value,
+  guests: document.getElementById('guests').value,
+};
+
+fetch('https://script.google.com/macros/s/AKfycbyqivbycjxe0cs4rKbyZej5dXD5NQfEM1A_ixMPuA6FOHyQ4FVbNlMYzWYIL6aGoJdh/exec', {
+  method: 'POST',
+  mode: 'no-cors', // Use 'cors' mode for appropriate handling
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+  .then((response) => response.json())
+  .then((responseData) => console.log("Response received:", responseData))
+  .catch((error) => console.error("Error!", error));
+
     </script>
     
 </body>
